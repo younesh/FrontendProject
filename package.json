@@ -1,0 +1,23 @@
+{
+  "name": "frontendproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "vue": "^2.6.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younesh/FrontendProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/younesh/FrontendProject/issues"
+  },
+  "homepage": "https://github.com/younesh/FrontendProject#readme"
+}
