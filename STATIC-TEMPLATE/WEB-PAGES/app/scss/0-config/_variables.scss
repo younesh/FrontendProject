@@ -39,7 +39,7 @@ $transition-all: all $transition-style;
 $transition-width: width $transition-style;
 // shadow :
 $shadow: 0 0 15px black;
-$shadow-light: 0 0 7px $color-black-meduim;
+$shadow-light: 0 0 7px rgba($color-black-meduim, 0.2);
 
 /*----- RESPONSIVE ------*/
 

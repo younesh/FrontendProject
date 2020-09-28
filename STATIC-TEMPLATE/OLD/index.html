@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('assets/styles/_normaliz.css');
+        @import url('assets/styles/_fonts.css');
+        @import url('assets/styles/_general.css');
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <head>
+            <h2> Liste de réference ... </h2>
+        </head>
+        <section class="allListContent" id="list-references">
+
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+    <script>
+        const reference = [{
+            title: "Tile Project 01 ",
+            description: " more description of project 01....",
+            link: "http://google.fr"
+        }, {
+            title: "Tile Project 02",
+            description: " more description of project 02....",
+            link: "http://google.fr"
+        }, {
+            title: "Tile Project 03",
+            description: " more description of project 03....",
+            link: "http://google.fr"
+        }, {
+            title: "Tile Project 04",
+            description: " more description of project 04 !!!...",
+            link: "http://google.fr"
+        }]
+
+
+
+        function MakeTemplateRef(ref) {
+            return `
+            <div class="card">
+                <figure>
+                    <img src="assets/images/${ref.slug}.jpg" alt="">
+                </figure>
+                <h3 class="card--title">
+                    ${ref.title}
+                </h3>
+                <div class="card--descript">
+                    ${ref.description}
+                </div>
+                <div class="card--footer">
+                    <a href="${ref.link}" class="card--link"> Plus ...</a>
+                </div>
+            </div>`
+        }
+
+        // to liste all card of ref project ... .
+        function listerRef() {
+            let allList = "";
+            for (item of reference) {
+                allList += MakeTemplateRef(item)
+            }
+            allList += "<div style='clear:both'></div>"
+            document.querySelector("#list-references").innerHTML = allList;
+        }
+
+
+        // the main project 
+        function main() {
+            listerRef();
+        };
+
+        main();
+    </script>
+</body>
+
+</html>
