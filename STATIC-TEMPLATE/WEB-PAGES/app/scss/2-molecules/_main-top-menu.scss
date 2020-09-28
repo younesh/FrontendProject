@@ -1,0 +1,13 @@
+.maintopmenu {
+    background-color: $color-black-dark;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    nav {
+        // display: flex;
+        a {
+            @include padding( null $gutter-half);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "starter-v201906",
+    "version": "1.0.0",
+    "description": "starter v201906",
+    "main": "gulpfile.js",
+    "author": "younes.C",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "autoprefixer": "^9.8.6",
+        "bootstrap": "^4.5.2",
+        "bourbon": "^5.1.0",
+        "browser-sync": "^2.26.12",
+        "cssnano": "^4.1.10",
+        "flatpickr": "^4.6.6",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.7.0",
+        "gulp-imagemin": "^6.2.0",
+        "gulp-livereload": "^4.0.2",
+        "gulp-postcss": "^8.0.0",
+        "gulp-replace": "^1.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-twig": "^1.2.0",
+        "gulp-uglify": "^3.0.2",
+        "jquery": "^3.5.1"
+    },
+    "dependencies": {}
+}

@@ -1,0 +1,25 @@
+{% if _context._target.relative == "index.html" %}
+    {% set home = "active" %}
+{% endif %}
+
+
+{% if _context._target.relative == "content-test.html" %}
+    {% set contentTest = "active" %}
+{% endif %}
+
+
+<nav>
+    <a class="{{home}}" href="index.html">
+        home
+    </a>
+
+    <a class="{{contentTest}}" href="content-test.html">
+        page content test
+    </a>
+
+    {# (!) hide for mobile   #}
+    <a class="deconnextion d-block d-md-none" href="#">
+        Déconnexion
+    </a>
+
+</nav>

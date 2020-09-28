@@ -1,0 +1,37 @@
+.header {
+    background-color: $color-brand-third; // goldenrod
+    color: white;
+    padding-top: 46px;
+    position: relative;
+    .header--top {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        nav {
+            flex: 1 1 auto;
+            a {
+                display: inline-block;
+                padding-right: $gutter-half;
+            }
+        }
+        input {
+            flex: 0 5 auto;
+            @include border-top-radius ($gutter-base);
+            @include border-bottom-radius ($gutter-base);
+        }
+    }
+}
+
+//-----  MEDIA QUERY / RESPONSIVE ----
+// ONLY ON MOBILE
+@media #{$bp-max-sm} {}
+
+@media #{$bp-min-sm} {}
+
+@media #{$bp-only-tablet} {}
+
+@media #{$bp-min-md} {}
+
+@media #{$bp-min-lg} {}
+
+@media #{$bp-min-xl} {}

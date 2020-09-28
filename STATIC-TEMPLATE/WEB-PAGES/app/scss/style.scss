@@ -1,0 +1,49 @@
+//-------- PLUGIN ---------
+
+/*LIB : BOOTSTRAP 4 */
+
+//@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "0-config/customBootstrap";
+
+/*LIB : SASS/BOURBON */
+
+@import "../../node_modules/bourbon/core/bourbon";
+
+/*LIB : calendar (flatpickr) */
+
+@import "../../node_modules/flatpickr/dist/flatpickr";
+
+/* 0- config / global */
+
+@import "0-config/fonts";
+@import "0-config/normaliz";
+@import "0-config/variables";
+@import "0-config/mixins";
+@import "0-config/iconFont";
+@import '0-config/general';
+
+/* 1- atoms */
+
+@import '1-atoms/buttons';
+@import '1-atoms/figureImg';
+@import '1-atoms/inputCheckbox';
+@import '1-atoms/inputRadio';
+@import '1-atoms/inputText';
+
+/* 2- molecules */
+
+@import '2-molecules/small-title';
+@import '2-molecules/main-top-menu';
+
+/* 3- organisms */
+
+@import '3-organismes/header';
+@import '3-organismes/footer';
+
+/* 4- Templates */
+
+@import '4-Templates/layout';
+
+/* 5- Pages */
+
+@import "5-Pages/page-home";
