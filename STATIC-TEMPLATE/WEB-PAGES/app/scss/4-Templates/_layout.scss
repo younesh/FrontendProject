@@ -6,8 +6,8 @@
 }
 
 .container {
-    // @include padding($gutter-half);
-    // width: 100%;
+    //  @include padding($gutter-half);
+    width: 100%;
 }
 
 //-----  MEDIA QUERY / RESPONSIVE ----
@@ -20,7 +20,7 @@
 
 @media #{$bp-min-xl} {
     .container {
-        //  width: 1200px;
+        width: 1200px;
         //  margin: 0 auto;
     }
 }

@@ -26,7 +26,7 @@ $color-orange-meduim: goldenrod; // goldenrod | #ff8800
 $color-red-light: #e05871;
 $color-red-meduim: #db3b3e;
 $color-red-dark: #972821;
-$color-brand-primary: $color-green-meduim;
+$color-brand-primary: $color-orange-meduim;
 $color-brand-secondary: $color-blue-dark;
 $color-brand-third:$color-red-dark; // $color-red-dark | $color-orange-meduim
 // borders : 
@@ -34,7 +34,9 @@ $border-default: 1px solid $color-gray-meduim;
 $border-blue-dark: 1px solid $color-blue-dark;
 $border-white: 1px solid white;
 // transition 
-$transition: left .3s ease;
+$transition-style :.3s ease;
+$transition-all: all $transition-style;
+$transition-width: width $transition-style;
 // shadow :
 $shadow: 0 0 15px black;
 $shadow-light: 0 0 7px $color-black-meduim;

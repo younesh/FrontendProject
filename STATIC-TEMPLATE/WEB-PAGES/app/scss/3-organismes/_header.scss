@@ -1,24 +1,12 @@
 .header {
-    background-color: $color-brand-third; // goldenrod
+    // goldenrod
     color: white;
-    padding-top: 46px;
     position: relative;
-    .header--top {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        nav {
-            flex: 1 1 auto;
-            a {
-                display: inline-block;
-                padding-right: $gutter-half;
-            }
-        }
-        input {
-            flex: 0 5 auto;
-            @include border-top-radius ($gutter-base);
-            @include border-bottom-radius ($gutter-base);
-        }
+    // .header__hero
+    &__hero {
+        background-color: $color-brand-third;
+        padding-top: 46px;
+        min-height: 300px;
     }
 }
 
