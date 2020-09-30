@@ -34,15 +34,28 @@
     .cart__link {
         height: 100%;
         color: white;
+        transition: all $transition-style;
         @include padding( null $gutter-half);
         @include Y-center;
+        z-index: 0;
         // .cart__link--github
         &--github {
             background-color: $color-brand-primary;
+            &:hover {
+                transform: translateX($gutter-base);
+                transform-origin: right;
+                z-index: 1;
+                @include padding( null $gutter-base);
+            }
         }
         // .cart__link--demo
         &--demo {
             background-color: $color-brand-secondary;
+            &:hover {
+                transform: translateX(0);
+                @include padding( null $gutter-base);
+                z-index: 1;
+            }
         }
     }
     // Hover/pointer on .card

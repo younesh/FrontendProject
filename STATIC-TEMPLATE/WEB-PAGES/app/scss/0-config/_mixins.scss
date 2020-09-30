@@ -23,6 +23,13 @@ c'est une mixin pour mettre de bloc ( model de boite ) de text visible
     flex-wrap: wrap;
 }
 
+@mixin YX-center-pa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @mixin firstLetter () {
     *::first-letter,
     &::first-letter {

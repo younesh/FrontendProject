@@ -12093,14 +12093,46 @@ var app = {};
 app.global = {
   init: function init() {
     app.global.hellowWord();
-    app.global.gulp_fix_encoding();
+    app.global.hoverAnimateAvatard();
+    /***------ */
+
+    /* ---------------------------  */
+    //  app.global.gulp_fix_encoding();
   },
   hellowWord: function hellowWord() {
     console.log("Hello word , generated js work !!........");
   },
+  hoverAnimateAvatard: function hoverAnimateAvatard() {
+    var X_centerAvatar = 455;
+    var Y_centerAvatar = 299;
+    var animAvatar = document.querySelector(".animate-avatar");
+    animAvatar.addEventListener("mousemove", function (evt) {
+      evt.stopPropagation();
+      console.log("X : " + evt.pageX + " -- Y" + evt.pageY);
+      var delta = Math.abs(evt.pageX - X_centerAvatar) / 100 + Math.abs(evt.pageY - Y_centerAvatar) / 100;
+
+      if (Math.abs(evt.pageX - X_centerAvatar) > Math.abs(evt.pageY - Y_centerAvatar)) {
+        delta = Math.abs(evt.pageX - X_centerAvatar) / 100;
+      } else {
+        delta = Math.abs(evt.pageY - Y_centerAvatar) / 100;
+      }
+
+      delta;
+      console.log(delta);
+      document.querySelector(".animate-avatar__html").style.animation = "rotating ".concat(delta * 6, "s linear infinite");
+      document.querySelector(".animate-avatar__css").style.animation = "rotating ".concat(delta * 4, "s linear infinite");
+      document.querySelector(".animate-avatar__js").style.animation = "rotating ".concat(delta * 2, "s linear infinite");
+    });
+    animAvatar.addEventListener("mouseout", function () {
+      document.querySelector(".animate-avatar__html").style.animation = "rotating 18s linear infinite";
+      document.querySelector(".animate-avatar__css").style.animation = "rotating 12s linear infinite";
+      document.querySelector(".animate-avatar__js").style.animation = "rotating 6s linear infinite";
+    });
+  },
 
   /*----------------------------- FIX GULP/A11P18-19 ---------------------------------*/
   gulp_fix_encoding: function gulp_fix_encoding() {
+    console.log("async gulp_fix_encoding ");
     $.get("data/a11p18.json", function (res) {
       app.global.doGulpSpecialfix(res);
     }).fail(function () {
