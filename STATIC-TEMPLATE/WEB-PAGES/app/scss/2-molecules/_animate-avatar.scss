@@ -2,6 +2,7 @@
     width: 260px;
     height: 260px;
     position: relative;
+    margin: 0 auto;
     cursor: url('img/rocket.png'), auto;
     //  .animate-avatar__photo
     &__photo {
@@ -13,7 +14,6 @@
         left: 43px;
         top: 37px;
     }
-    // animate-avatar__html
     &__html,
     &__css,
     &__js {

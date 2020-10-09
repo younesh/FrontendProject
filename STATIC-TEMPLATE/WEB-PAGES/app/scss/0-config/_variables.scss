@@ -37,6 +37,7 @@ $border-white: 1px solid white;
 $transition-style :.3s ease;
 $transition-all: all $transition-style;
 $transition-width: width $transition-style;
+$transition-default: $transition-all;
 // shadow :
 $shadow: 0 0 15px black;
 $shadow-light: 0 0 7px rgba($color-black-meduim, 0.2);

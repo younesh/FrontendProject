@@ -15,32 +15,39 @@ app.global = {
         console.log("Hello word , generated js work !!........");
     },
     hoverAnimateAvatard: () => {
-        const X_centerAvatar = 455;
-        const Y_centerAvatar = 299;
         const animAvatar = document.querySelector(".animate-avatar");
+        const X_centerAvatar = window.innerWidth / 2;
+        const Y_centerAvatar = offset(animAvatar).top + 150;
         animAvatar.addEventListener("mousemove", (evt) => {
             evt.stopPropagation();
-            console.log("X : " + evt.pageX + " -- Y" + evt.pageY);
+            console.log("Math.abs(evt.pageX - X_centerAvatar): " + Math.abs(evt.pageX - X_centerAvatar) + " -- Math.abs(evt.pageY - Y_centerAvatar)" + Math.abs(evt.pageY - Y_centerAvatar));
 
-            let delta = Math.abs(evt.pageX - X_centerAvatar) / 100 + Math.abs(evt.pageY - Y_centerAvatar) / 100;
-            if (Math.abs(evt.pageX - X_centerAvatar) > Math.abs(evt.pageY - Y_centerAvatar)) {
-                delta = Math.abs(evt.pageX - X_centerAvatar) / 100;
-            } else {
-                delta = Math.abs(evt.pageY - Y_centerAvatar) / 100;
-            }
-            delta;
+            let delta = 0;
+            /*  if (Math.abs(evt.pageX - X_centerAvatar) > Math.abs(evt.pageY - Y_centerAvatar)) {
+                 delta = Math.abs(evt.pageY - Y_centerAvatar) / 100;
+             } else {
+                 delta = Math.abs(evt.pageX - X_centerAvatar) / 100;
+             } */
+            delta = Math.abs(evt.pageY - Y_centerAvatar) * Math.abs(evt.pageX - X_centerAvatar) / 10000;
             console.log(delta);
 
-            document.querySelector(".animate-avatar__html").style.animation = `rotating ${delta*6}s linear infinite`;
-            document.querySelector(".animate-avatar__css").style.animation = `rotating ${delta*4}s linear infinite`;
-            document.querySelector(".animate-avatar__js").style.animation = `rotating ${delta*2}s linear infinite`;
+            document.querySelector(".animate-avatar__html").style.animation = `rotating ${delta*18}s linear infinite`;
+            document.querySelector(".animate-avatar__css").style.animation = `rotating ${delta*12}s linear infinite`;
+            document.querySelector(".animate-avatar__js").style.animation = `rotating ${delta*8}s linear infinite`;
 
         });
         animAvatar.addEventListener("mouseout", () => {
-            document.querySelector(".animate-avatar__html").style.animation = "rotating 18s linear infinite";
-            document.querySelector(".animate-avatar__css").style.animation = "rotating 12s linear infinite";
-            document.querySelector(".animate-avatar__js").style.animation = "rotating 6s linear infinite";
+            document.querySelector(".animate-avatar__html").style.animation = "rotating 6s linear infinite";
+            document.querySelector(".animate-avatar__css").style.animation = "rotating 4s linear infinite";
+            document.querySelector(".animate-avatar__js").style.animation = "rotating  2s linear infinite";
         })
+
+        function offset(el) {
+            var rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+        }
 
     },
     /*----------------------------- FIX GULP/A11P18-19 ---------------------------------*/
